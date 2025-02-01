@@ -109,7 +109,8 @@ def main():
                 st.progress(probs[1])
 
                 # Display messages based on user responses
-                if user_responses["resell_convenience"].isin(['Strongly Disagree','Somewhat Disagree']):
+                if user_responses["resell_convenience"] in ['Strongly Disagree', 'Somewhat Disagree']:
+
                     st.write("You disagree that reselling is convenient. You can easily sell your consumer product on e-bay")
                 
                 if user_responses["resell_worthwhile"] <= -1:

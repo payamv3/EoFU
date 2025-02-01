@@ -55,16 +55,9 @@ def main():
             question,
             min_value=-2.0,
             max_value=2.0,
-            values=['Strongly Disagree','Somewhat Disagree','I do not know/No opinion','Somewhat Agree','Strongly Agree'],
+            values=0,
             step=1.0,
             help="Slide to indicate your level of agreement",
-            #format=lambda x: {
-            #    -2.0: "Strongly Disagree",
-            #    -1.0: "Disagree",
-            #    0.0: "Neutral",
-            #    1.0: "Agree",
-            #    2.0: "Strongly Agree"
-            #}[x]
         )
 
     # Define behavior pairs
@@ -107,7 +100,7 @@ def main():
 
                 # Display messages based on user responses
                 if user_responses["resell_convenience"] <= -1:
-                    st.write("You disagree that reselling is convenient. You can easily sell your consumer product on e-bay?")
+                    st.write("You disagree that reselling is convenient. You can easily sell your consumer product on e-bay")
                 
                 if user_responses["resell_worthwhile"] <= -1:
                     st.write("You disagree that the money you can get from reselling makes it worthwhile, have you tried looking up the value of your device on e-bay?")

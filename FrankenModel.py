@@ -55,7 +55,7 @@ def main():
             question,
             min_value=-2.0,
             max_value=2.0,
-            value=0.0,
+            value=['Strongly Disagree','Somewhat Disagree','I do not know/No opinion','Somewhat Agree','Strongly Agree'],
             step=1.0,
             help="Slide to indicate your level of agreement",
             #format=lambda x: {

@@ -49,16 +49,26 @@ def main():
     }
 
     # Create sliders for each attitude question with text labels
-    user_responses = {}
-    for key, question in attitude_questions.items():
-        user_responses[key] = st.slider(
-            question,
-            min_value=-2.0,
-            max_value=2.0,
-            values=0,
-            step=1.0,
-            help="Slide to indicate your level of agreement",
-        )
+    likert_labels = {
+    "Strongly Disagree": -2,
+    "Somewhat Disagree": -1,
+    "I do not know / No opinion": 0,
+    "Somewhat Agree": 1,
+    "Strongly Agree": 2
+}
+
+user_responses = {}
+
+for key, question in attitude_questions.items():
+    response = st.select_slider(
+        question,
+        options=list(likert_labels.keys()),  # Display labels
+        value="I do not know / No opinion",  # Default selection
+        help="Slide to indicate your level of agreement"
+    )
+    
+    # Store the corresponding numerical value
+    user_responses[key] = likert_labels[response]
 
     # Define behavior pairs
     behavior_pairs = [

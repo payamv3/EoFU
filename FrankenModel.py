@@ -58,13 +58,13 @@ def main():
             value=0.0,
             step=1.0,
             help="Slide to indicate your level of agreement",
-            format=lambda x: {
-                -2.0: "Strongly Disagree",
-                -1.0: "Disagree",
-                0.0: "Neutral",
-                1.0: "Agree",
-                2.0: "Strongly Agree"
-            }[x]
+            #format=lambda x: {
+            #    -2.0: "Strongly Disagree",
+            #    -1.0: "Disagree",
+            #    0.0: "Neutral",
+            #    1.0: "Agree",
+            #    2.0: "Strongly Agree"
+            #}[x]
         )
 
     # Define behavior pairs

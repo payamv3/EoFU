@@ -68,7 +68,7 @@ def main():
         )
     
     # Store the corresponding numerical value
-    user_responses[key] = likert_labels[response]
+        user_responses[key] = likert_labels[response]
 
     # Define behavior pairs
     behavior_pairs = [

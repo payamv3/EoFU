@@ -37,8 +37,8 @@ def main():
     st.title("Behavior Prediction System")
     st.write("""
     Think of an electronic device that you own and currently use. This could be a smartphone, tablet, AR/VR or gaming device, streaming device, smart TV, kitchen appliance, connected home device. Answer the following questions with that device in mind.
-    To what extent do you agree or disagree with the fllowing? You can move the sliders according to the below guide: 
-    (-2: Strongly Disagree, 2: Strongly Agree)
+    
+    To what extent do you agree or disagree with the following? You can move the sliders from -2: Strongly Disagree to 2: Strongly Agree
     """)
 
     # Define attitude questions - these should match your attitude_columns

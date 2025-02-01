@@ -110,7 +110,7 @@ def main():
 
                 # Display messages based on user responses
                 if user_responses["resell_convenience"] <= -1: #in ['Strongly Disagree', 'Somewhat Disagree']:
-                    st.write("You disagree that reselling is convenient. You can easily sell your consumer product on e-bay")
+                    st.write("You disagree that reselling is convenient. You can easily sell your consumer product on e-bay.")
                 
                 if user_responses["resell_worthwhile"] <= -1: #in ['Strongly Disagree', 'Somewhat Disagree']:
                     st.write("You disagree that the money you can get from reselling makes it worthwhile, have you tried looking up the value of your device on e-bay?")

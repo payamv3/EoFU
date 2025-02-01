@@ -67,7 +67,7 @@ def main():
 
     # Define behavior pairs
     behavior_pairs = [
-        ("Recycle it", "Resell it"),
+        #("Recycle it", "Resell it"),
         #("recycle", "donate"),
         ("Resell it", "Throw it away with household trash")
     ]

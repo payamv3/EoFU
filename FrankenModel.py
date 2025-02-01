@@ -38,7 +38,7 @@ def main():
     st.write("""
     Think of an electronic device that you own and currently use. This could be a smartphone, tablet, AR/VR or gaming device, streaming device, smart TV, kitchen appliance, connected home device. Answer the following questions with that device in mind.
     
-    To what extent do you agree or disagree with the following? You can move the sliders from -2: Strongly Disagree to 2: Strongly Agree
+    To what extent do you agree or disagree with the following? You can move the sliders from Strongly Disagree to Strongly Agree
     """)
 
     # Define attitude questions - these should match your attitude_columns
@@ -46,14 +46,9 @@ def main():
         "resell_value": "I know the resale value of the device",
         "resell_convenience": "It is convenient to resell the device",
         "resell_worthwhile": "The money I can get makes reselling the device worthwhile",
-        #"resell_investment": "I considered the resale value when buying this device",
-        #"resell_online": "I know how to resell the device online",
-        #"resell_offline":"I know how to resell the device at a local store",
-        #"resell_data":"I am hesitant about reselling because of data left on the device",
-        #"resell_environment":"Reselling protects envrionment"
     }
 
-    # Create sliders for each attitude question
+    # Create sliders for each attitude question with text labels
     user_responses = {}
     for key, question in attitude_questions.items():
         user_responses[key] = st.slider(
@@ -62,13 +57,18 @@ def main():
             max_value=2.0,
             value=0.0,
             step=1.0,
-            help="Slide to indicate your level of agreement"
+            help="Slide to indicate your level of agreement",
+            format=lambda x: {
+                -2.0: "Strongly Disagree",
+                -1.0: "Disagree",
+                0.0: "Neutral",
+                1.0: "Agree",
+                2.0: "Strongly Agree"
+            }[x]
         )
 
     # Define behavior pairs
     behavior_pairs = [
-        #("Recycle it", "Resell it"),
-        #("recycle", "donate"),
         ("Resell it", "Throw it away with household trash")
     ]
 
@@ -104,6 +104,13 @@ def main():
                 
                 # Create a progress bar for visualization
                 st.progress(probs[1])
+
+                # Display messages based on user responses
+                if user_responses["resell_convenience"] <= -1:
+                    st.write("You disagree that reselling is convenient. You can easily sell your consumer product on e-bay?")
+                
+                if user_responses["resell_worthwhile"] <= -1:
+                    st.write("You disagree that the money you can get from reselling makes it worthwhile, have you tried looking up the value of your device on e-bay?")
 
         st.write("""
         ---

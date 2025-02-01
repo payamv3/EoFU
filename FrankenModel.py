@@ -55,17 +55,17 @@ def main():
     "I do not know / No opinion": 0,
     "Somewhat Agree": 1,
     "Strongly Agree": 2
-}
+    }
 
-user_responses = {}
+    user_responses = {}
 
-for key, question in attitude_questions.items():
-    response = st.select_slider(
-        question,
-        options=list(likert_labels.keys()),  # Display labels
-        value="I do not know / No opinion",  # Default selection
-        help="Slide to indicate your level of agreement"
-    )
+    for key, question in attitude_questions.items():
+        response = st.select_slider(
+            question,
+            options=list(likert_labels.keys()),  # Display labels
+            value="I do not know / No opinion",  # Default selection
+            help="Slide to indicate your level of agreement"
+        )
     
     # Store the corresponding numerical value
     user_responses[key] = likert_labels[response]

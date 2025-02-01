@@ -46,11 +46,11 @@ def main():
         "resell_value": "I know the resale value of the device",
         "resell_convenience": "It is convenient to resell the device",
         "resell_worthwhile": "The money I can get makes reselling the device worthwhile",
-        "resell_investment": "I considered the resale value when buying this device",
-        "resell_online": "I know how to resell the device online",
-        "resell_offline":"I know how to resell the device at a local store",
-        "resell_data":"I am hesitant about reselling because of data left on the device",
-        "resell_environment":"Reselling protects envrionment"
+        #"resell_investment": "I considered the resale value when buying this device",
+        #"resell_online": "I know how to resell the device online",
+        #"resell_offline":"I know how to resell the device at a local store",
+        #"resell_data":"I am hesitant about reselling because of data left on the device",
+        #"resell_environment":"Reselling protects envrionment"
     }
 
     # Create sliders for each attitude question

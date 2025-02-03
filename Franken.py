@@ -71,7 +71,7 @@ def main():
         #    st.write("**2**: Strongly Agree")
         
         # Create sliders for each attitude question
-        st.subheader("Attitude Questions")
+        #st.subheader("Attitude Questions")
         responses = {}
         
         # Define labels for steps

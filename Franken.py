@@ -31,12 +31,12 @@ def load_model(model_path='model.pkl'):
 def create_attitude_questions():
     """Define the attitude questions exactly as in training data"""
     return {
-        'resell_value': 'The device has significant resale value',
-        'resell_convenience': 'It is convenient for me to resell my device',
-        'resell_worthwhile': 'The money I could get from reselling my device is worth the effort',
-        'resell_investment': 'Electronic devices are an investment and I should recover some of the cost by reselling',
-        'recycle_know_where': 'I know where to recycle my device',
-        'recycle_convenience': 'It is convenient for me to recycle my device'
+        "resell_value": "I know the resale value of my device",
+        "resell_convenience": "It is convenient to resell the device",
+        "resell_worthwhile": "The money I can get makes reselling the device worthwhile",
+        "resell_investment":"I considered the resale value of my device when I purchased it",
+        "recycle_know_where":"If I device to recycle my device, I know where to do it",
+        "recycle_trust":"If I device to recycle my device, I trust the recycler's integrity during the process"
     }
 
 def main():

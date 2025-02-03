@@ -35,7 +35,7 @@ def create_attitude_questions():
         "resell_convenience": "It is convenient to resell the device",
         "resell_worthwhile": "The money I can get makes reselling the device worthwhile",
         "resell_investment":"I considered the resale value of my device when I purchased it",
-        "recycle_know_where":"If I device to recycle my device, I know where to do it",
+        "recycle_know_where":"If I decide to recycle my device, I know where to do it",
         "recycle_convenience":"It is convenient to recycle my device"
     }
 

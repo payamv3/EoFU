@@ -256,7 +256,7 @@ def main():
                 url = 'https://ebay.us/RW8rZZ'
                 extra_message = (
                     "It looks like you might be planning to resell your device.\n"
-                    "Youy !\n"
+                    "You should check the following resources!\n"
                     f"1. [eBay]({url}) - The largest online marketplace for used electronics\n"
                     f"2. Back Market - Specialized in refurbished electronics\n"
                     f"3. Swappa - For direct sales of used electronics\n"
